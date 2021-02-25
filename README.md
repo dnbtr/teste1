@@ -9,6 +9,7 @@
 - Baixar dependências `$ yarn install`, tanto na pasta `frontend` quanto na `backend`
 - Iniciar o backend `$ yarn run dev` na pasta `backend`;
 - Iniciar o frontend `$ yarn start` na pasta `frontend`;
+- Utilizar o login "email@email.com" com a senha "teste";
 
 ### TO-DOs
 
