@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { verifyPassword } from '../utils';
+import { verifyPassword, generateJWTToken } from '../utils';
 
 import mockDatabase from '../db/mockDatabase.json';
 
@@ -19,13 +19,13 @@ export default class HashController {
     }
 
     // Se encontrar o usuário, verificar a senha
-    let isPasswordValid: boolean = await verifyPassword(password, foundUser.password);
-
+    const isPasswordValid: boolean = await verifyPassword(password, foundUser.password);
+    
     if (!isPasswordValid) {
       return res.status(403).json({ status: 'error', message: 'email and/or password incorrect or user does not exist' }).send();
     } else {
-      // Gerar o JWT...
-      return res.status(200).json({ status: 'sucess', message: 'login feito com sucesso!' }).send();
+      const token = generateJWTToken({ email });
+      return res.status(200).json({ status: 'sucess', message: 'login feito com sucesso!', token: token }).send();
     }
   }
 }
