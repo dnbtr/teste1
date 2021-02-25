@@ -25,7 +25,7 @@ export default class HashController {
       return res.status(403).json({ status: 'error', message: 'email and/or password incorrect or user does not exist' }).send();
     } else {
       const token = generateJWTToken({ email });
-      return res.status(200).json({ status: 'sucess', message: 'login feito com sucesso!', token: token }).send();
+      return res.status(200).json({ status: 'sucess', message: 'login feito com sucesso!', token: token, user: email }).send();
     }
   }
 }
