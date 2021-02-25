@@ -1,10 +1,17 @@
 import React, { useCallback } from 'react';
 import { Button, Modal } from 'react-bootstrap';
 
-const ModalForgotPassword = ({ show, setShow }) => {
+type ModalProps = {
+  show: boolean;
+  onClick: (state: any) => void;
+  setShow: (state: any) => void;
+}
+
+const ModalForgotPassword: React.FC<ModalProps> = ({ show, setShow, onClick }: ModalProps) => {
+  
   const handleClose = useCallback(() => {
-    setShow(state => !state);
-  }, []);
+    setShow((state: any) => !state);
+  }, [setShow]);
 
   return (
     <>

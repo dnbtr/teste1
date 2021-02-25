@@ -11,7 +11,8 @@
     "react-bootstrap": "^1.5.0",
     "react-dom": "^17.0.1",
     "react-responsive-modal": "^6.0.1",
-    "react-scripts": "4.0.3"
+    "react-scripts": "4.0.3",
+    "typescript": "^4.2.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -21,7 +22,12 @@
   },
   "eslintConfig": {
     "rules": {
-      "react/jsx-no-duplicate-props": ["enabled", { "ignoreCase": true }]
+      "react/jsx-no-duplicate-props": [
+        0,
+        {
+          "ignoreCase": true
+        }
+      ]
     },
     "extends": [
       "react-app",
@@ -39,5 +45,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/react-dom": "^17.0.1",
+    "@types/react-router-dom": "^5.1.7"
   }
 }
