@@ -13,9 +13,9 @@
 
 ### TO-DOs
 
-[] - Terminar de integrar o front-end ao back-end;
-[] - Inserir middleware para checagem do JWT no back-end
-[] - Criar uma página inicial no front-end;
+- [ ] Terminar de integrar o front-end ao back-end;
+- [ ] Inserir middleware para checagem do JWT no back-end
+- [ ] Criar uma página inicial no front-end;
 
 ---
 
