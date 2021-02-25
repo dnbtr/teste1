@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
 import { verifyPassword } from '../utils';
+
 import mockDatabase from '../db/mockDatabase.json';
 
 export default class HashController {
@@ -12,7 +13,6 @@ export default class HashController {
         return user;
       }
     });
-    console.log('foundUser', foundUser);
 
     if (!foundUser) {
       return res.status(403).json({ status: 'error', message: 'email and/or password incorrect or user does not exist' }).send();
@@ -25,7 +25,7 @@ export default class HashController {
       return res.status(403).json({ status: 'error', message: 'email and/or password incorrect or user does not exist' }).send();
     } else {
       // Gerar o JWT...
-      return res.status(200).json({ status: 'sucess', message: 'login feito com sucesso!' });
+      return res.status(200).json({ status: 'sucess', message: 'login feito com sucesso!' }).send();
     }
   }
 }
