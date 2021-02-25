@@ -4,7 +4,7 @@
 
 ---
 
-### Como iniciar
+### Como testar o projeto
 - Baixar o reposítório `$ git clone https://github.com/dnbtr/teste1.git`
 - Baixar dependências `$ yarn install`, tanto na pasta `frontend` quanto na `backend`
 - Iniciar o backend `$ yarn run dev` na pasta `backend`;
@@ -51,9 +51,11 @@ JSON do Request:
 
 - Há alguns elementos de DDD e MVC, mas não foi dada uma atenção muito grande à arquitetura;
  - Se de fato fosse algo que iria pro ar, uma revisão da arquitetura seria necessária
+- Por questão de simplicidade, nenhum banco de dados foi utilizado (os usuários logados estão persistidos em um JSON).
 
 - **Os valores negativos não estão sendo calculados corretamente no buffer final**
-  - Isso ainda será ajustado.
+  - Como os Buffers do NodeJS são compostos de **UInt8**, nativamente não é possível representar corretamente números negativos
+  - Construir uma função para calcular corretamente os valores exigirá mais tempo e pesquisa.
 
 ---
 
