@@ -19,3 +19,9 @@ Desenvolva uma função que recebe um objeto Numbers e retorne um buffer no segu
 
 Quantos bytes o buffer de retorno possui?
 Qual o valor máximo da variável number3?
+
+
+#### Notas
+
+Há alguns elementos de DDD e MVC, mas não foi dada uma atenção muito grande à arquitetura;
+ - Se de fato fosse algo que iria pro ar, uma revisão da arquitetura seria necessária
