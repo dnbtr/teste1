@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "email": "mfairholme0@skype.com",
+    "password": "b260bf3b6467328dae9dece3c2e9512b:d8be35ea7c0c2d8446ad55b2810af28ba1cb5114d26ce04afc193bdfb93c6fcfb70251fbecbcd8cef58cba812256e1c463f623cb2c04eec534d8080e6a947115"
+  },
+  {
+    "id": 2,
+    "email": "ifellman1@si.edu",
+    "password": "bf0f8474392d1e7349dbdd74c72cb900:b2f18cc4f83fec8db72ea2412b297e0854b012ba53aaf79d96bca28459de4436ee5a4e0bf0f4e4b369e4dc4be1c8ba91e4dda39d47bc66114908cd19dbd4b856"
+  },
+  {
+    "id": 3,
+    "email": "eolivey2@diigo.com",
+    "password": "4266b38cf0b78ff72bcc7c33a5995d76:4b15971c6c7cf24fec60307aac48549557ffb38afec8267966d92a4c9683cebace24e48dd8231755a0052a5bd1839a83ea378f938909ef3474c0237f639f84c3"
+  },
+  {
+    "id": 4,
+    "email": "bfackney3@hubpages.com",
+    "password": "0a7352553010207ab4a8120c99c957bf:dff650161bd497bce8ef3b5bffcd41e0d22e53b80c31bc450eaeb6bcc13f2959ffaf8c85bec2e80218426a19d9c83f438376d15f2eb87d3d92924f827fb4b775"
+  },
+  {
+    "id": 5,
+    "email": "awehner4@edublogs.org",
+    "password": "edbc05da0366a9836c0b8dc178afaf18:3d2d069d79cfc0089b55680a68fccb363ea8b988ab6dc5671fecf42c1112b7d02ec30c87ed089c6ce800c06fd6a18290f97999f02e0cf18a1cf5bd735accac63"
+  },
+  {
+    "id": 6,
+    "email": "email@email.com",
+    "password": "f0e206ddd41e5bc4aa88b4d77fe0fe4d:55d52edeaf850873a78dc81eaf7dacff879361b9406f429741e6d317d8c8afafc99eb37f45fd80ee2abf8a3a056df85fb24cdf050fb8113882ad64181af684ee"
+  }
+]

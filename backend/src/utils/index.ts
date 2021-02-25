@@ -1,5 +1,13 @@
 import { readFile } from 'fs/promises';
-import { createHash } from 'crypto';
+import { createHash, randomBytes, scrypt } from 'crypto';
+
+const getTextFile = async (filename: string): Promise<Buffer> => {
+  try {
+    return await readFile(`./src/data/${filename}.txt`);
+  } catch (error) {
+    return error;
+  }
+};
 
 const generateSHA256FromString = async (string: string) => {
   const stringBuffer = Buffer.from(string, 'binary');
@@ -14,12 +22,27 @@ const generateSHA256FromString = async (string: string) => {
   }
 }
 
-const getTextFile = async (filename: string): Promise<Buffer> => {
-  try {
-    return await readFile(`./src/data/${filename}.txt`);
-  } catch (error) {
-    return error;
-  }
-};
+const hashPassword = async (password: string) => {
+  return new Promise((resolve, reject) => {
+    // generate random 16 bytes long salt
+    const salt = randomBytes(16).toString("hex")
 
-export { getTextFile, generateSHA256FromString };
+    scrypt(password, salt, 64, (err, derivedKey) => {
+      if (err) reject(err);
+      resolve(salt + ":" + derivedKey.toString('hex'))
+    });
+  })
+}
+
+const verifyPassword = (password: string, hash: string): Promise<boolean> => {
+  return new Promise((resolve, reject) => {
+    const [salt, key] = hash.split(":")
+    scrypt(password, salt, 64, (err, derivedKey) => {
+      if (err) reject(err);
+      resolve(key == derivedKey.toString('hex'))
+    });
+  })
+}
+
+
+export { getTextFile, generateSHA256FromString, hashPassword, verifyPassword };
