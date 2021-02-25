@@ -10,6 +10,12 @@
 - Iniciar o backend `$ yarn run dev` na pasta `backend`;
 - Iniciar o frontend `$ yarn start` na pasta `frontend`;
 
+### TO-DOs
+
+[] - Terminar de integrar o front-end ao back-end;
+[] - Inserir middleware para checagem do JWT no back-end
+[] - Criar uma página inicial no front-end;
+
 ---
 
 ### Endpoints
@@ -52,26 +58,26 @@ JSON do Request:
 
 Valores máximos dos números
 ```
-**Signed** (primeiro bit sinalizando se número é positivo ou negativo)
-  - Para o número de 32 bits: **-2147483648 <= 2147483647**
-  - Para o número de 16 bits: **-32768 <= 32767**
-  - Para o número de 8 bits: **128 <= 127**
+Signed (primeiro bit sinalizando se número é positivo ou negativo)
+  - Para o número de 32 bits: -2147483648 <= 2147483647
+  - Para o número de 16 bits: -32768 <= 32767
+  - Para o número de 8 bits: 128 <= 127
 
-**Unsigned** (primeiro bit usado para armazenar mais informação)
-  - Para o número de 32 bits: **0 <= 4294967295**
-  - Para o número de 16 bits: **0 <= 65535**
-  - Para o número de 8 bits: **0 <= 255**
+Unsigned (primeiro bit usado para armazenar mais informação)
+  - Para o número de 32 bits: 0 <= 4294967295
+  - Para o número de 16 bits: 0 <= 65535
+  - Para o número de 8 bits: 0 <= 255
 ```
 ---
 
 O Buffer de retorno possui 7 bytes, com os seguintes valores máximos:
 ```text
-*signed*
+signed
 Máximo: 36028797010575230 (74 ff ff ff ff 7f ff 7f)
 Mínimo: atualmente valores são retornados incorretamente
   - Este ponto exige mais pesquisa de como fazer a conversão
 
-*unsigned*
+unsigned
 Máximo: 72057594037927940 (ff ff ff ff ff ff ff)
 Mínimo: 0
 ```
