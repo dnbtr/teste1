@@ -25,3 +25,13 @@ Qual o valor máximo da variável number3?
 
 Há alguns elementos de DDD e MVC, mas não foi dada uma atenção muito grande à arquitetura;
  - Se de fato fosse algo que iria pro ar, uma revisão da arquitetura seria necessária
+
+**Signed** (primeiro bit sinalizando se é positivo ou negativo)
+Para o número de 32 bits: **-2147483648 <= 2147483647**
+Para o número de 16 bits: **-32768 <= 32767**
+Para o número de 8 bits: **128 <= 127**
+
+**Unsigned** (primeiro bit também é usado para armazenar informação)
+Para o número de 32 bits: **0 <= 4294967295**
+Para o número de 16 bits: **0 <= 65535**
+Para o número de 8 bits: **0 <= 255**
