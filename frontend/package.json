@@ -20,6 +20,9 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
+    "rules": {
+      "react/jsx-no-duplicate-props": ["enabled", { "ignoreCase": true }]
+    },
     "extends": [
       "react-app",
       "react-app/jest"
