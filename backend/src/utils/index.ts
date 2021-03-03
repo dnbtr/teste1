@@ -4,20 +4,23 @@ import { createHash, randomBytes, scrypt } from 'crypto';
 
 const getTextFile = async (filename: string): Promise<Buffer> => {
   try {
+
     return await readFile(`./src/data/${filename}.txt`);
   } catch (error) {
+    
     console.error('getTextFile', error);
     return error;
   }
 };
 
-const generateSHA256FromString = async (string: string) => {
+const generateSHA256FromString = async (string: string): Promise<string> => {
   const stringBuffer = Buffer.from(string, 'binary');
   try {
-    const hash = createHash('sha256').update(stringBuffer).digest('hex');
 
+    const hash = createHash('sha256').update(stringBuffer).digest('hex');
     return hash;
   } catch (error) {
+
     console.error('generateSHA256FromString', error);
     return error;
   }
@@ -30,7 +33,7 @@ const generateJWTToken = (payload: object): string => {
   return token;
 }
 
-const hashPassword = async (password: string) => {
+const hashPassword = async (password: string): Promise<string> => {
   return new Promise((resolve, reject) => {
     // generate random 16 bytes long salt
     const salt = randomBytes(16).toString("hex")
